@@ -18,7 +18,10 @@ FirstTestCase
     Click Element    link=Logout     
     Log    This test was executed by %{username} on %{os}    
     Close Browser
-    
+
+SecondTestCase
+    Log    second test case
+
 *** Variables ***
 ${URL}      https://orangehrm-demo-6x.orangehrmlive.com/auth/login   
 @{CREDENTIAL}    admin    admin123  
