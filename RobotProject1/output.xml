@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.1 (Python 3.8.3 on win32)" generated="20200709 11:11:58.026" rpa="false">
+<suite id="s1" name="TestSuite1" source="C:\Users\vkumari009\Documents\GxA\Workspaces\eclipse_2020\RobotProject1\test\TestSuite1.robot">
+<kw name="Log" library="BuiltIn" type="setup">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>i am inside test suite set up</arg>
+</arguments>
+<msg timestamp="20200709 11:12:01.032" level="INFO">i am inside test suite set up</msg>
+<status status="PASS" starttime="20200709 11:12:01.031" endtime="20200709 11:12:01.032"></status>
+</kw>
+<test id="s1-t1" name="FirstTestCase">
+<kw name="Log" library="BuiltIn" type="setup">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>i am inside test setup</arg>
+</arguments>
+<msg timestamp="20200709 11:12:01.034" level="INFO">i am inside test setup</msg>
+<status status="PASS" starttime="20200709 11:12:01.034" endtime="20200709 11:12:01.035"></status>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20200709 11:12:01.036" level="INFO">Opening browser 'chrome' to base url 'https://orangehrm-demo-6x.orangehrmlive.com/auth/login'.</msg>
+<status status="PASS" starttime="20200709 11:12:01.036" endtime="20200709 11:12:18.690"></status>
+</kw>
+<kw name="Set Browser Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<status status="PASS" starttime="20200709 11:12:18.692" endtime="20200709 11:12:18.701"></status>
+</kw>
+<kw name="LoginKW">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=txtUsername</arg>
+<arg>@{CREDENTIAL}[0]</arg>
+</arguments>
+<msg timestamp="20200709 11:12:18.708" level="WARN">Accessing variable items using '@{CREDENTIAL}[0]' syntax is deprecated. Use '${CREDENTIAL}[0]' instead.</msg>
+<msg timestamp="20200709 11:12:18.717" level="INFO">Typing text 'admin' into text field 'id=txtUsername'.</msg>
+<status status="PASS" starttime="20200709 11:12:18.707" endtime="20200709 11:12:18.894"></status>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=txtPassword</arg>
+<arg>&amp;{Logincred}[password]</arg>
+</arguments>
+<msg timestamp="20200709 11:12:18.894" level="WARN">Accessing variable items using '&amp;{Logincred}[password]' syntax is deprecated. Use '${Logincred}[password]' instead.</msg>
+<msg timestamp="20200709 11:12:18.896" level="INFO">Typing password into text field 'id=txtPassword'.</msg>
+<msg timestamp="20200709 11:12:18.941" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20200709 11:12:19.014" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20200709 11:12:18.894" endtime="20200709 11:12:19.014"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>id=btnLogin</arg>
+</arguments>
+<msg timestamp="20200709 11:12:19.015" level="INFO">Clicking button 'id=btnLogin'.</msg>
+<status status="PASS" starttime="20200709 11:12:19.014" endtime="20200709 11:12:48.465"></status>
+</kw>
+<status status="PASS" starttime="20200709 11:12:18.705" endtime="20200709 11:12:48.466"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id=account-job</arg>
+</arguments>
+<msg timestamp="20200709 11:12:48.470" level="INFO">Clicking element 'id=account-job'.</msg>
+<status status="PASS" starttime="20200709 11:12:48.468" endtime="20200709 11:12:48.845"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>link=Logout</arg>
+</arguments>
+<msg timestamp="20200709 11:12:48.848" level="INFO">Clicking element 'link=Logout'.</msg>
+<status status="PASS" starttime="20200709 11:12:48.847" endtime="20200709 11:12:52.248"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>This test was executed by %{username} on %{os}</arg>
+</arguments>
+<msg timestamp="20200709 11:12:52.250" level="INFO">This test was executed by vkumari009 on Windows_NT</msg>
+<status status="PASS" starttime="20200709 11:12:52.249" endtime="20200709 11:12:52.250"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200709 11:12:52.251" endtime="20200709 11:12:55.278"></status>
+</kw>
+<kw name="Log" library="BuiltIn" type="teardown">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>i am inside test teardown</arg>
+</arguments>
+<msg timestamp="20200709 11:12:55.285" level="INFO">i am inside test teardown</msg>
+<status status="PASS" starttime="20200709 11:12:55.284" endtime="20200709 11:12:55.286"></status>
+</kw>
+<doc>First test</doc>
+<status status="PASS" starttime="20200709 11:12:01.032" endtime="20200709 11:12:55.287" critical="yes"></status>
+</test>
+<kw name="Log" library="BuiltIn" type="teardown">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>i am inside test suite tear down</arg>
+</arguments>
+<msg timestamp="20200709 11:12:55.296" level="INFO">i am inside test suite tear down</msg>
+<status status="PASS" starttime="20200709 11:12:55.295" endtime="20200709 11:12:55.296"></status>
+</kw>
+<status status="PASS" starttime="20200709 11:11:58.060" endtime="20200709 11:12:55.296"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="TestSuite1">TestSuite1</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20200709 11:12:18.708" level="WARN">Accessing variable items using '@{CREDENTIAL}[0]' syntax is deprecated. Use '${CREDENTIAL}[0]' instead.</msg>
+<msg timestamp="20200709 11:12:18.894" level="WARN">Accessing variable items using '&amp;{Logincred}[password]' syntax is deprecated. Use '${Logincred}[password]' instead.</msg>
+</errors>
+</robot>
